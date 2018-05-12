@@ -1,0 +1,55 @@
+<ion-view view-title="Kalkulator">
+    <ion-content class="padding">
+
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <!--<i class="icon ion-ios-search placeholder-icon"></i>-->
+                <input type="search" value="{{ izlaz }}" disabled>
+            </label>
+            <button class="button ion-arrow-left-c button-energized" ng-click="brisi()"> 
+                
+            </button>
+        </div>
+        <div>
+            <div class="button-bar">
+                <a class="button button-energized" ng-click="operator('+/-')">+/-</a>
+                <a class="button button-energized" ng-click="operator('x2')">x2</a>
+                <a class="button button-energized" ng-click="operator('korijen')">√</a>
+                <a class="button button-energized" ng-click="operator('/')">/</a>
+            </div>
+            <br>
+
+            <div class="button-bar">
+                <a class="button button-assertive" ng-click="znamenka('7')">7</a>
+                <a class="button button-assertive" ng-click="znamenka('8')">8</a>
+                <a class="button button-assertive" ng-click="znamenka('9')">9</a>
+                <a class="button button-energized" ng-click="operator('*')">*</a>
+            </div>
+            <br>
+
+            <div class="button-bar">
+                <a class="button button-assertive" ng-click="znamenka('4')">4</a>
+                <a class="button button-assertive" ng-click="znamenka('5')">5</a>
+                <a class="button button-assertive" ng-click="znamenka('6')">6</a>
+                <a class="button button-energized" id="minus" ng-click="operator('-')">-</a>
+            </div>
+            <br>
+
+            <div class="button-bar">
+                <a class="button button-assertive" id="jedan" ng-click="znamenka('1')">1</a>
+                <a class="button button-assertive" id="dva" ng-click="znamenka('2')">2</a>
+                <a class="button button-assertive" id="tri" ng-click="znamenka('3')">3</a>
+                <a class="button button-energized" id="plus" ng-click="operator('+')">+</a>
+            </div>
+            <br>
+
+            <div class="button-bar">
+
+                <a class="button button-energized" id="brisanje" ng-click="ocisti()">C</a>
+                <a class="button button-assertive" id="nula" ng-click="znamenka('0')">0</a>
+                <a class="button button-energized" id="zarez" ng-click="decimalna('.')">.</a>
+                <a class="button button-energized" id="jednako" ng-click="rezultat()">=</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
